@@ -1,0 +1,24 @@
+---
+import ReactShoppingList from "../react-components/ReactShoppingCart"
+import Discounter from '../svelte-components/Discounter.svelte';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="dark:bg-black dark:text-white mx-auto max-w-4xl mt-5">
+		<div class="flex">
+			<div class="flex-[0.5] border-r-2 border-r-gray-700 pr-3">
+				<ReactShoppingList client:load />
+			</div>
+			<div class="flex-[0.5] pl-3">
+				<Discounter client:load />	
+			</div>
+		</div>
+	</body>
+</html>
